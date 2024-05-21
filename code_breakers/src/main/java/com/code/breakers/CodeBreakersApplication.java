@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.code.breakers;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
