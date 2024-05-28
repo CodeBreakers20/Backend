@@ -20,4 +20,8 @@ public class UserTemp extends BaseEntity {
 	
 	String sessionId;
 	
+	public void setSessionId(String id) {
+		this.sessionId = id;
+	}
+	
 }

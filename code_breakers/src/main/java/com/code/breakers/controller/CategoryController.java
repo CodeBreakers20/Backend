@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,6 +15,7 @@ import com.code.breakers.service.CategoryService;
 
 @RestController
 @RequestMapping("/category")
+@CrossOrigin("http://localhost:3000")
 public class CategoryController {
 	
 	@Autowired
@@ -25,8 +27,9 @@ public class CategoryController {
 		return ResponseEntity.ok().body(categoryService.getCategory());
 	}
 	
-	@PostMapping
-	public ResponseEntity<?> acceptData(List<Category> category){
-		return ResponseEntity.ok().body(categoryService.acceptData(category));
+	@GetMapping("/fillCategoryData")
+	public ResponseEntity<?> fillCategory(){
+		System.out.println("Aditya Misal........................");
+		return ResponseEntity.ok().body(categoryService.acceptData());
 	}
 }

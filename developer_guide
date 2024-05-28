@@ -1,0 +1,23 @@
+	Developer guide ====>
+
+		command to delete and reset the database -
+			drop database code_db;
+
+		url for create category database -
+			http://localhost:8080/category/fillCategoryData -------------------- create url
+			
+		url to get the category data -
+			http://localhost:8080/category/getCategoryData  -------------------- get url
+			
+			
+			
+			
+		--------------------------------------------------------------------------------
+		request and response flow ==============>
+		
+		1) send the resquest to from the postman to create url to fill the data
+		2) send the request to the get url and get the category data
+		3) send the request to the 3rd party url and then get the words data
+		4) finally use the last url to fill the group wise data to the database
+		
+		
