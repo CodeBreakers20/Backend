@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.code.breakers.service.CommonService;
+
 import jakarta.persistence.GeneratedValue;
 
 @RestController
@@ -16,7 +18,7 @@ import jakarta.persistence.GeneratedValue;
 public class CommonController {
 	
 	@Autowired
-	CommonService commonService
+	CommonService commonService;
 	
 	@GetMapping("/getUrl")
 	public ResponseEntity<?> generateUrl() {

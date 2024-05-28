@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.code.breakers.entity.Category;
 import com.code.breakers.entity.Word;
 import com.code.breakers.service.WordService;
 
@@ -21,7 +22,7 @@ public class WordController {
 	WordService wordService;
 	
 	@PostMapping("/fillWords")
-	public ResponseEntity<?> fillWordData(List<Word> words){
+	public ResponseEntity<?> fillWordData(List<String> words, Category category){
 		wordService.fillData(words);
 		return ResponseEntity.ok().body("Filled data success");
 	}	

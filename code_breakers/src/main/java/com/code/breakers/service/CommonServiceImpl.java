@@ -20,7 +20,8 @@ public class CommonServiceImpl implements CommonService{
 		UserTemp user = userDao.getById(user_id);
 		user.setSessionId(uuid.toString());
 		
-		String urlString = 
+//		String urlString = 
+		return "";
 	}
 
 }
